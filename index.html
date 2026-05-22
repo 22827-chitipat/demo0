@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติส่วนตัว - ชิติพัทธ์ คงัจนทร์</title>
+    <title>Profile | ชิติพัทธ์ คงจันทร์ (ยูโร)</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ตั้งค่าพื้นฐาน */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Kanit', sans-serif;
+            font-family: 'Prompt', sans-serif;
         }
 
         body {
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #1f1f21 0%, #111112 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            color: #333;
+            padding: 20px;
         }
 
-        /* กล่อง Profile Card */
         .profile-card {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 400px;
+            background: rgba(40, 40, 43, 0.75);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
+            width: 100%;
+            max-width: 480px;
+            padding: 35px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             text-align: center;
             transition: transform 0.3s ease;
         }
@@ -45,121 +46,185 @@
             transform: translateY(-5px);
         }
 
-        /* ส่วนหัวของการ์ด (สีดำตามสีที่ชอบ) */
-        .card-header {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            padding: 40px 20px 60px;
+        /* Avatar Section */
+        .avatar-wrapper {
             position: relative;
-        }
-
-        .card-header h1 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .card-header p {
-            font-size: 16px;
-            font-weight: 300;
-            color: #cccccc;
-        }
-
-        /* รูปโปรไฟล์ / ไอคอนแทนรูป */
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            background-color: #ffffff;
-            color: #1a1a1a;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #555, #222);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 50px;
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border: 4px solid #ffffff;
+            border: 3px solid #444;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
 
-        /* ส่วนข้อมูลส่วนตัว */
-        .card-body {
-            padding: 70px 30px 40px;
+        .avatar-wrapper i {
+            font-size: 55px;
+            color: #b3b3b3;
         }
 
-        .info-list {
-            list-style: none;
+        /* Name & Nickname */
+        .profile-card h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .nickname {
+            font-size: 1rem;
+            color: #a0a0a0;
+            font-weight: 300;
+            margin-bottom: 30px;
+            display: inline-block;
+            background: #333336;
+            padding: 4px 16px;
+            border-radius: 20px;
+            border: 1px solid #444;
+        }
+
+        /* Info Details */
+        .info-container {
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .info-list li {
-            background-color: #f9f9f9;
-            margin-bottom: 15px;
-            padding: 15px 20px;
-            border-radius: 12px;
+        .info-item {
             display: flex;
             align-items: center;
-            font-size: 16px;
-            color: #444;
-            transition: background-color 0.2s ease;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 14px 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: background 0.2s ease;
         }
 
-        .info-list li:hover {
-            background-color: #f1f1f1;
+        .info-item:hover {
+            background: rgba(255, 255, 255, 0.06);
         }
 
-        .info-list li i {
-            width: 30px;
-            font-size: 18px;
-            color: #1a1a1a; /* ไอคอนสีดำ */
-            margin-right: 15px;
+        .info-item i {
+            font-size: 1.2rem;
+            width: 35px;
+            color: #cccccc;
             text-align: center;
+            margin-right: 15px;
         }
 
-        /* ป้ายกำกับข้อมูล */
-        .label {
-            font-weight: 600;
-            margin-right: 8px;
-            color: #1a1a1a;
+        .info-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            color: #888888;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            color: #e5e5e5;
+            font-weight: 400;
+        }
+
+        /* Special Badges for Colors & Subjects */
+        .badge {
+            background: #444446;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin-right: 5px;
+            border: 1px solid #555;
+            display: inline-block;
+        }
+
+        .color-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: middle;
+            border: 1px solid #777;
+        }
+        .dot-black { background-color: #000; }
+        .dot-gray { background-color: #808080; }
+
+        /* Footer Accent */
+        .footer-line {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: #555;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <div class="profile-card">
-        <div class="card-header">
-            <h1>นาย ชิติพัทธ์ คงัจนทร์</h1>
-            <p>ชื่อเล่น: ยูโร</p>
-            <div class="profile-img">
-                <i class="fa-solid fa-user-astronaut"></i>
-            </div>
+        <div class="avatar-wrapper">
+            <i class="fa-solid fa-user-astronaut"></i>
         </div>
-        
-        <div class="card-body">
-            <ul class="info-list">
-                <li>
-                    <i class="fa-solid fa-cake-candles"></i>
-                    <div><span class="label">วันเกิด:</span> 21 กุมภาพันธ์ 2555</div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-utensils"></i>
-                    <div><span class="label">อาหารที่ชอบ:</span> ข้าวผัดกะเพรา</div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-palette"></i>
-                    <div><span class="label">สีที่ชอบ:</span> ดำ</div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-computer"></i>
-                    <div><span class="label">วิชาที่ชอบ:</span> คอมพิวเตอร์</div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-user-group"></i>
-                    <div><span class="label">เพื่อนสนิท:</span> ติ๋ว</div>
-                </li>
-            </ul>
+        <h1>นาย ชิติพัทธ์ คงจันทร์</h1>
+        <span class="nickname">ชื่อเล่น: ยูโร</span>
+
+        <div class="info-container">
+            
+            <div class="info-item">
+                <i class="fa-solid fa-cake-candles"></i>
+                <div class="info-content">
+                    <span class="info-label">วันเกิด</span>
+                    <span class="info-value">28 กรกฎาคม 2535</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fa-solid fa-utensils"></i>
+                <div class="info-content">
+                    <span class="info-label">อาหารที่ชอบ</span>
+                    <span class="info-value">ข้าวมันไก่ 🍗</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fa-solid fa-palette"></i>
+                <div class="info-content">
+                    <span class="info-label">สีที่ชอบ</span>
+                    <span class="info-value">
+                        <span class="badge"><span class="color-dot dot-black"></span>สีดำ</span>
+                        <span class="badge"><span class="color-dot dot-gray"></span>สีเทา</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="info-content">
+                    <span class="info-label">วิชาที่ชอบ</span>
+                    <span class="info-value">คณิตศาสตร์ , วิทยาศาสตร์</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fa-solid fa-user-group"></i>
+                <div class="info-content">
+                    <span class="info-label">เพื่อนสนิท</span>
+                    <span class="info-value">โกกิ</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-line">
+            © 2026 CHITIPHAT KONGJAN
         </div>
     </div>
 
