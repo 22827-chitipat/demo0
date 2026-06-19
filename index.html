@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>โปรไฟล์นักเรียน - ชิติพัทธ์ คงจันทร์</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>โปรไฟล์นักเรียน - ชิติพัทธ์ คงจันทร์ (MUFC Edition)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,13 +16,13 @@
                         sans: ['Kanit', 'Prompt', 'sans-serif'],
                     },
                     colors: {
-                        cyber: {
-                            bg: '#090d16',
-                            card: '#111827',
-                            accent: '#38bdf8',
-                            glow: 'rgba(56, 189, 248, 0.15)',
-                            border: '#1f2937',
-                            secondary: '#818cf8'
+                        mufc: {
+                            red: '#da020e',
+                            redGlow: 'rgba(218, 2, 14, 0.3)',
+                            gold: '#ffe500',
+                            dark: '#0a0a0a',
+                            card: '#141414',
+                            border: '#262626'
                         }
                     }
                 }
@@ -30,25 +30,23 @@
         }
     </script>
     <style>
-        /* Custom scrollbar and glow animations */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #090d16;
+            background: #0a0a0a;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1f2937;
+            background: #262626;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #38bdf8;
+            background: #da020e;
         }
         .glow-hover:hover {
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
-            border-color: #38bdf8;
+            box-shadow: 0 0 20px rgba(218, 2, 14, 0.4);
+            border-color: #da020e;
         }
-        /* Music visualizer animation */
         @keyframes bounce {
             0%, 100% { height: 4px; }
             50% { height: 24px; }
@@ -64,171 +62,156 @@
         .bar:nth-child(7) { animation-delay: 0.35s; }
     </style>
 </head>
-<body class="bg-[#090d16] text-slate-100 min-h-screen flex flex-col justify-center items-center py-8 px-4 relative overflow-x-hidden font-sans">
+<body class="bg-[#0a0a0a] text-slate-100 min-h-screen flex flex-col justify-center items-center py-8 px-4 relative overflow-x-hidden font-sans">
 
-    <!-- Particle background representing Tech/Programming -->
-    <canvas id="particleCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-30 z-0"></canvas>
+    <!-- Red Devils Particle Background -->
+    <canvas id="particleCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0"></canvas>
 
     <!-- Main Container -->
-    <div class="relative z-10 w-full max-w-4xl bg-gray-900/90 backdrop-blur-md rounded-3xl border border-gray-800 shadow-2xl overflow-hidden transition-all duration-300">
+    <div class="relative z-10 w-full max-w-4xl bg-stone-900/90 backdrop-blur-md rounded-3xl border border-stone-800 shadow-2xl overflow-hidden transition-all duration-300">
         
-        <!-- 1. Hero Cover Photo (Modern Cyber abstract background) -->
+        <!-- 1. Hero Cover Photo (Manchester United Stadium / Cyber Red Vibe) -->
         <div class="relative w-full h-64 md:h-80 overflow-hidden group">
             <img 
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop" 
-                alt="Cyber Abstract Banner" 
+                src="https://images.unsplash.com/photo-1624286456201-163f8489ca4a?q=80&w=1200&auto=format&fit=crop" 
+                alt="Old Trafford Stadium Vibe" 
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                onerror="this.src='https://placehold.co/1200x500/1e293b/38bdf8?text=Student+Profile+Banner'"
+                onerror="this.src='https://placehold.co/1200x500/da020e/ffffff?text=GGMU+Theatre+of+Dreams'"
             >
-            <!-- Sleek Dark Gradients to blend image into the card design -->
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-black/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-black/40"></div>
             
-            <!-- Quick badge overlays -->
-            <span class="absolute top-4 right-4 bg-sky-500/20 text-sky-400 border border-sky-500/30 text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-md flex items-center gap-1.5 shadow-lg">
-                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                Tech Club
+            <!-- Badge overlay -->
+            <span class="absolute top-4 right-4 bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-md flex items-center gap-1.5 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                👹 GLORY GLORY MAN UNITED
             </span>
         </div>
 
         <!-- 2. Profile Header & Identity Info -->
         <div class="px-6 md:px-10 pb-6 relative z-10">
-            <!-- Overlapping Avatar Container -->
             <div class="flex flex-col md:flex-row md:items-end justify-between -mt-16 md:-mt-20 mb-6 gap-4">
                 <div class="flex flex-col md:flex-row items-center md:items-end gap-5 text-center md:text-left">
-                    <!-- Tech Cyber Ring Avatar with the requested Image in circle -->
-                    <div class="w-32 h-32 md:w-36 md:h-36 rounded-full bg-gray-900 p-1 border-4 border-sky-400 shadow-xl relative group overflow-visible">
-                        <div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden transition-all">
-                            <!-- Image placed inside the circle with scale effect on hover -->
+                    <!-- Red Cyber Ring Avatar with requested Bruno Image -->
+                    <div class="w-32 h-32 md:w-36 md:h-36 rounded-full bg-stone-950 p-1 border-4 border-red-600 shadow-xl relative group overflow-visible shadow-red-600/10">
+                        <div class="w-full h-full rounded-full bg-stone-800 flex items-center justify-center overflow-hidden transition-all">
                             <img 
                                 src="https://preview.redd.it/bruno-fernandes-a-club-legend-but-whats-next-v0-o26ra5g1l8pe1.jpeg?auto=webp&s=e2c098cf165f13db0fe32bc6c21d5ffaa1c2af33" 
                                 alt="ด.ช. ชิติพัทธ์ คงจันทร์ (ยูโร)" 
                                 class="w-full h-full object-cover object-top rounded-full transition-transform duration-500 group-hover:scale-110"
-                                onerror="this.src='https://placehold.co/150x150/1e293b/38bdf8?text=Euro'"
                             >
                         </div>
-                        <!-- Tech Pulsing Dot -->
-                        <span class="absolute bottom-2 right-2 w-4 h-4 bg-emerald-500 border-2 border-gray-900 rounded-full animate-ping"></span>
-                        <span class="absolute bottom-2 right-2 w-4 h-4 bg-emerald-500 border-2 border-gray-900 rounded-full"></span>
+                        <span class="absolute bottom-2 right-2 w-4 h-4 bg-amber-500 border-2 border-stone-950 rounded-full animate-ping"></span>
+                        <span class="absolute bottom-2 right-2 w-4 h-4 bg-amber-500 border-2 border-stone-950 rounded-full" title="Captain Class"></span>
                     </div>
 
-                    <!-- Title & Identity -->
                     <div class="mb-2">
-                        <span class="text-xs font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-2">STUDENT PROFILE</span>
+                        <span class="text-xs font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-2">THE RED DEVILS PROFILE</span>
                         <h1 class="text-2xl md:text-3xl font-bold text-white tracking-tight">ด.ช. ชิติพัทธ์ คงจันทร์</h1>
-                        <p class="text-gray-400 text-sm md:text-base mt-1 font-medium">ชื่อเล่น: <span class="text-white">ยูโร (Euro)</span></p>
+                        <p class="text-stone-400 text-sm md:text-base mt-1 font-medium">ชื่อเล่น: <span class="text-red-500 font-semibold">ยูโร (Euro)</span></p>
                     </div>
                 </div>
 
-                <!-- Chomtong School Card badge -->
-                <div class="bg-gray-800/80 border border-gray-700/50 p-3.5 rounded-2xl flex items-center gap-3 self-center md:self-end backdrop-blur-sm shadow-md">
-                    <div class="p-2 bg-sky-500/10 rounded-xl text-sky-400">
+                <!-- School Card (MU Premium style) -->
+                <div class="bg-stone-950/80 border border-stone-800 p-3.5 rounded-2xl flex items-center gap-3 self-center md:self-end backdrop-blur-sm shadow-md">
+                    <div class="p-2 bg-red-600/10 rounded-xl text-red-500">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3m0 2.18L18.73 9 12 12.82 5.27 9 12 5.18M12 15.82L5.5 12.28V14.73L12 18.27l6.5-3.54v-2.45l-6.5 3.54z"/>
                         </svg>
                     </div>
                     <div>
-                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">โรงเรียน</p>
+                        <p class="text-[10px] text-stone-500 uppercase tracking-widest font-semibold">โรงเรียน</p>
                         <h3 class="text-sm font-semibold text-white">จอมทอง</h3>
-                        <p class="text-xs text-sky-400 font-medium">มัธยมศึกษาปีที่ 3 (ม.3)</p>
+                        <p class="text-xs text-amber-400 font-medium">มัธยมศึกษาปีที่ 3 (ม.3)</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. Dynamic Tabs Layout -->
-            <div class="flex border-b border-gray-800 mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
-                <button onclick="switchTab('general')" id="tab-general" class="tab-btn px-5 py-3 text-sm font-semibold border-b-2 border-sky-400 text-sky-400 transition-all">
-                    💻 ข้อมูลทั่วไป
+            <!-- 3. Dynamic Tabs Layout (MU Red/Gold Theme) -->
+            <div class="flex border-b border-stone-800 mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
+                <button onclick="switchTab('general')" id="tab-general" class="tab-btn px-5 py-3 text-sm font-semibold border-b-2 border-red-600 text-red-500 transition-all">
+                    👹 ข้อมูลทั่วไป
                 </button>
-                <button onclick="switchTab('activities')" id="tab-activities" class="tab-btn px-5 py-3 text-sm font-semibold border-b-2 border-transparent text-gray-400 hover:text-white transition-all">
-                    🏀 การเรียน & กิจกรรม
+                <button onclick="switchTab('activities')" id="tab-activities" class="tab-btn px-5 py-3 text-sm font-semibold border-b-2 border-transparent text-stone-400 hover:text-white transition-all">
+                    ⚽ การเรียน & กิจกรรม
                 </button>
-                <button onclick="switchTab('interests')" id="tab-interests" class="tab-btn px-5 py-3 text-sm font-semibold border-b-2 border-transparent text-gray-400 hover:text-white transition-all">
-                    🎨 ไลฟ์สไตล์ & ทักษะ
+                <button onclick="switchTab('interests')" id="tab-interests" class="tab-btn px-5 py-3 text-sm font-semibold border-b-2 border-transparent text-stone-400 hover:text-white transition-all">
+                    🏆 ไลฟ์สไตล์ & ทักษะ
                 </button>
             </div>
 
             <!-- TAB 1: General Info -->
-            <div id="content-general" class="tab-content block space-y-6 animate-fadeIn">
-                <h3 class="text-sm font-bold text-sky-400 uppercase tracking-widest flex items-center gap-2">
-                    <span>■</span> ข้อมูลทั่วไป (General Info)
+            <div id="content-general" class="tab-content block space-y-6">
+                <h3 class="text-sm font-bold text-red-500 uppercase tracking-widest flex items-center gap-2">
+                    <span>🔴</span> ข้อมูลทั่วไป (General Info)
                 </h3>
                 
-                <!-- Info cards grid -->
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="bg-gray-800/40 hover:bg-gray-800/60 transition-all border border-gray-800 p-4 rounded-xl shadow-inner group">
-                        <p class="text-xs text-gray-500 mb-1">วันเกิด</p>
-                        <p class="text-base font-semibold text-white group-hover:text-sky-400 transition-colors">21 / 02 / 2555</p>
+                    <div class="bg-stone-950/40 hover:bg-stone-950/70 transition-all border border-stone-800 p-4 rounded-xl group hover:border-red-600/30">
+                        <p class="text-xs text-stone-500 mb-1">วันเกิด</p>
+                        <p class="text-base font-semibold text-white group-hover:text-red-400 transition-colors">21 / 02 / 2555</p>
                     </div>
-                    <div class="bg-gray-800/40 hover:bg-gray-800/60 transition-all border border-gray-800 p-4 rounded-xl shadow-inner group">
-                        <p class="text-xs text-gray-500 mb-1">เพศ</p>
-                        <p class="text-base font-semibold text-white group-hover:text-sky-400 transition-colors">ชาย</p>
+                    <div class="bg-stone-950/40 hover:bg-stone-950/70 transition-all border border-stone-800 p-4 rounded-xl group hover:border-red-600/30">
+                        <p class="text-xs text-stone-500 mb-1">เพศ</p>
+                        <p class="text-base font-semibold text-white group-hover:text-red-400 transition-colors">ชาย</p>
                     </div>
-                    <div class="bg-gray-800/40 hover:bg-gray-800/60 transition-all border border-gray-800 p-4 rounded-xl shadow-inner group">
-                        <p class="text-xs text-gray-500 mb-1">กรุ๊ปเลือด</p>
+                    <div class="bg-stone-950/40 hover:bg-stone-950/70 transition-all border border-stone-800 p-4 rounded-xl group hover:border-red-600/30">
+                        <p class="text-xs text-stone-500 mb-1">กรุ๊ปเลือด</p>
                         <p class="text-base font-bold text-red-500">B</p>
                     </div>
-                    <div class="bg-gray-800/40 hover:bg-gray-800/60 transition-all border border-gray-800 p-4 rounded-xl shadow-inner group">
-                        <p class="text-xs text-gray-500 mb-1">ราศี</p>
-                        <p class="text-base font-semibold text-white group-hover:text-sky-400 transition-colors">กุมภ์</p>
+                    <div class="bg-stone-950/40 hover:bg-stone-950/70 transition-all border border-stone-800 p-4 rounded-xl group hover:border-red-600/30">
+                        <p class="text-xs text-stone-500 mb-1">ราศี</p>
+                        <p class="text-base font-semibold text-white group-hover:text-red-400 transition-colors">กุมภ์</p>
                     </div>
-                    <div class="bg-gray-800/40 hover:bg-gray-800/60 transition-all border border-gray-800 p-4 rounded-xl shadow-inner group">
-                        <p class="text-xs text-gray-500 mb-1">ภูมิลำเนา</p>
-                        <p class="text-base font-semibold text-white group-hover:text-sky-400 transition-colors">เชียงใหม่</p>
+                    <div class="bg-stone-950/40 hover:bg-stone-950/70 transition-all border border-stone-800 p-4 rounded-xl group hover:border-red-600/30">
+                        <p class="text-xs text-stone-500 mb-1">ภูมิลำเนา</p>
+                        <p class="text-base font-semibold text-white group-hover:text-red-400 transition-colors">เชียงใหม่</p>
                     </div>
-                    <div class="bg-gray-800/40 hover:bg-gray-800/60 transition-all border border-gray-800 p-4 rounded-xl shadow-inner group">
-                        <p class="text-xs text-gray-500 mb-1">ส่วนสูง</p>
-                        <p class="text-base font-semibold text-white group-hover:text-sky-400 transition-colors">170 ซม.</p>
+                    <div class="bg-stone-950/40 hover:bg-stone-950/70 transition-all border border-stone-800 p-4 rounded-xl group hover:border-red-600/30">
+                        <p class="text-xs text-stone-500 mb-1">ส่วนสูง</p>
+                        <p class="text-base font-semibold text-white group-hover:text-red-400 transition-colors">170 ซม.</p>
                     </div>
                 </div>
             </div>
 
             <!-- TAB 2: Academic & Activities -->
             <div id="content-activities" class="tab-content hidden space-y-6">
-                <h3 class="text-sm font-bold text-sky-400 uppercase tracking-widest flex items-center gap-2">
-                    <span>■</span> การเรียน & กิจกรรม (Academic & Activities)
+                <h3 class="text-sm font-bold text-red-500 uppercase tracking-widest flex items-center gap-2">
+                    <span>🔴</span> การเรียน & กิจกรรม (Academic & Activities)
                 </h3>
 
                 <div class="grid md:grid-cols-2 gap-4">
-                    <!-- Favorite Subject -->
-                    <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-emerald-500/30 transition-all group">
+                    <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-emerald-500/30 transition-all group">
                         <span class="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </span>
                         <div>
-                            <h4 class="text-xs text-gray-500 font-medium uppercase">วิชาที่ชอบ</h4>
+                            <h4 class="text-xs text-stone-500 font-medium uppercase">วิชาที่ชอบ</h4>
                             <p class="text-base font-semibold text-emerald-400 mt-1 group-hover:translate-x-1 transition-transform">คณิตศาสตร์</p>
                         </div>
                     </div>
 
-                    <!-- Hardest Subject -->
-                    <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-red-500/30 transition-all group">
+                    <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-red-500/30 transition-all group">
                         <span class="p-2 bg-red-500/10 text-red-400 rounded-lg">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                         </span>
                         <div>
-                            <h4 class="text-xs text-gray-500 font-medium uppercase">วิชาที่ท้าทายที่สุด</h4>
-                            <p class="text-base font-semibold text-red-400 mt-1 group-hover:translate-x-1 transition-transform">คณิตศาสตร์ <span class="text-xs font-normal text-gray-500">(มีความซับซ้อนและลับสมอง!)</span></p>
+                            <h4 class="text-xs text-stone-500 font-medium uppercase">วิชาที่ท้าทายที่สุด</h4>
+                            <p class="text-base font-semibold text-red-400 mt-1 group-hover:translate-x-1 transition-transform">คณิตศาสตร์ <span class="text-xs font-normal text-stone-500">(ซับซ้อน ท้าทายสมองเหมือนแท็กติกฟุตบอล!)</span></p>
                         </div>
                     </div>
 
-                    <!-- Club -->
-                    <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-sky-500/30 transition-all group">
-                        <span class="p-2 bg-sky-500/10 text-sky-400 rounded-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
-                        </span>
+                    <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-amber-500/30 transition-all group">
+                        <span class="p-2 bg-amber-500/10 text-amber-400 rounded-lg">🤖</span>
                         <div>
-                            <h4 class="text-xs text-gray-500 font-medium uppercase">ชมรม / กิจกรรมพิเศษ</h4>
+                            <h4 class="text-xs text-stone-500 font-medium uppercase">ชมรม / กิจกรรมพิเศษ</h4>
                             <p class="text-base font-semibold text-white mt-1 group-hover:translate-x-1 transition-transform">หุ่นยนต์ (Robotics)</p>
                         </div>
                     </div>
 
-                    <!-- Best Friend -->
-                    <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-sky-500/30 transition-all group">
-                        <span class="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        </span>
+                    <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5 hover:border-red-500/30 transition-all group">
+                        <span class="p-2 bg-red-500/10 text-red-400 rounded-lg">🤝</span>
                         <div>
-                            <h4 class="text-xs text-gray-500 font-medium uppercase">เพื่อนสนิท</h4>
+                            <h4 class="text-xs text-stone-500 font-medium uppercase">เพื่อนสนิท (คู่หูแดนกลาง)</h4>
                             <p class="text-base font-semibold text-white mt-1 group-hover:translate-x-1 transition-transform">ลูกก๋ง</p>
                         </div>
                     </div>
@@ -237,106 +220,96 @@
 
             <!-- TAB 3: Interests & Skills -->
             <div id="content-interests" class="tab-content hidden space-y-8">
-                <!-- Inner sub-grid -->
                 <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Preferences Details -->
                     <div class="space-y-4">
-                        <h3 class="text-sm font-bold text-sky-400 uppercase tracking-widest flex items-center gap-2">
-                            <span>■</span> ไลฟ์สไตล์ (Preferences)
+                        <h3 class="text-sm font-bold text-red-500 uppercase tracking-widest flex items-center gap-2">
+                            <span>🔴</span> ไลฟ์สไตล์ (Preferences)
                         </h3>
 
-                        <!-- Food -->
-                        <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5">
+                        <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5">
                             <span class="p-2 bg-amber-500/10 text-amber-400 rounded-lg">🍿</span>
                             <div>
-                                <h4 class="text-xs text-gray-500 font-medium">อาหารที่ชื่นชอบ</h4>
+                                <h4 class="text-xs text-stone-500 font-medium">อาหารที่ชื่นชอบ</h4>
                                 <p class="text-sm font-semibold text-white mt-0.5">ข้าวผัดกะเพราไข่ดาวไม่สุก</p>
                             </div>
                         </div>
 
-                        <!-- Colors -->
-                        <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5">
-                            <span class="p-2 bg-slate-500/10 text-slate-400 rounded-lg">🎨</span>
+                        <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5">
+                            <span class="p-2 bg-red-500/10 text-red-400 rounded-lg">🎨</span>
                             <div>
-                                <h4 class="text-xs text-gray-500 font-medium">โทนสีโปรด</h4>
+                                <h4 class="text-xs text-stone-500 font-medium">โทนสีโปรด</h4>
                                 <div class="flex items-center gap-2 mt-1.5">
-                                    <div class="w-5 h-5 rounded-full bg-black border border-gray-700" title="ดำ"></div>
-                                    <div class="w-5 h-5 rounded-full bg-gray-500 border border-gray-600" title="เทา"></div>
-                                    <div class="w-5 h-5 rounded-full bg-white border border-gray-300" title="ขาว"></div>
-                                    <span class="text-xs text-gray-400 ml-1 font-medium">ดำ, เทา, ขาว</span>
+                                    <div class="w-5 h-5 rounded-full bg-red-600 border border-red-700" title="แดง"></div>
+                                    <div class="w-5 h-5 rounded-full bg-black border border-stone-800" title="ดำ"></div>
+                                    <div class="w-5 h-5 rounded-full bg-white border border-stone-300" title="ขาว"></div>
+                                    <span class="text-xs text-stone-400 ml-1 font-medium">แดง, ดำ, ขาว (MU Colors!)</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Hobbies & Sport -->
-                        <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5">
-                            <span class="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg">🏀</span>
+                        <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5">
+                            <span class="p-2 bg-amber-500/10 text-amber-400 rounded-lg">🏀</span>
                             <div>
-                                <h4 class="text-xs text-gray-500 font-medium">งานอดิเรก & กีฬา</h4>
+                                <h4 class="text-xs text-stone-500 font-medium">งานอดิเรก & กีฬา</h4>
                                 <p class="text-sm font-semibold text-white mt-0.5">ฟังเพลง (แนว Pop) / เล่นบาสเกตบอล</p>
                             </div>
                         </div>
 
-                        <!-- Anime -->
-                        <div class="bg-gray-800/40 border border-gray-800 p-4 rounded-xl flex items-start gap-3.5">
-                            <span class="p-2 bg-fuchsia-500/10 text-fuchsia-400 rounded-lg">📺</span>
+                        <div class="bg-stone-950/40 border border-stone-800 p-4 rounded-xl flex items-start gap-3.5">
+                            <span class="p-2 bg-purple-500/10 text-purple-400 rounded-lg">📺</span>
                             <div>
-                                <h4 class="text-xs text-gray-500 font-medium">อนิเมะที่กำลังชื่นชอบ</h4>
+                                <h4 class="text-xs text-stone-500 font-medium">อนิเมะที่กำลังชื่นชอบ</h4>
                                 <p class="text-sm font-semibold text-white mt-0.5">Wistoria of Wands and Swords</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Music Player Mockup & Future Dream Block -->
                     <div class="space-y-6">
-                        <!-- Music Player Mockup -->
-                        <div class="bg-slate-950/80 border border-sky-950 p-4 rounded-2xl shadow-lg relative overflow-hidden">
+                        <!-- Music Player with Red Devils Style -->
+                        <div class="bg-black border border-red-950 p-4 rounded-2xl shadow-lg relative overflow-hidden">
                             <div class="absolute top-2 right-2 flex gap-1">
-                                <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/60"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/60"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-stone-800"></span>
                             </div>
-                            <p class="text-[10px] text-sky-400 font-mono tracking-widest uppercase mb-2">Pop Music Player</p>
+                            <p class="text-[10px] text-red-500 font-mono tracking-widest uppercase mb-2">OT Audio Player</p>
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-sky-950 border border-sky-800/30 rounded-xl flex items-center justify-center text-sky-400">
+                                <div class="w-12 h-12 bg-stone-900 border border-red-900/30 rounded-xl flex items-center justify-center text-red-500">
                                     🎵
                                 </div>
                                 <div class="flex-1">
-                                    <h4 class="text-xs text-slate-400 font-bold">ตอนนี้กำลังฟังเพลงโปรด</h4>
-                                    <p class="text-sm text-sky-400 font-bold truncate">Euro's Favorite Tracks</p>
+                                    <h4 class="text-xs text-stone-400 font-bold">กำลังเปิดเพลงกระตุ้นใจ</h4>
+                                    <p class="text-sm text-red-500 font-bold truncate">Euro's Matchday Playlist</p>
                                 </div>
-                                <!-- Visualizer Bars -->
                                 <div class="flex items-end gap-0.5 h-6">
-                                    <span class="bar w-0.5 bg-sky-400 rounded-full"></span>
-                                    <span class="bar w-0.5 bg-sky-400 rounded-full"></span>
-                                    <span class="bar w-0.5 bg-sky-400 rounded-full"></span>
-                                    <span class="bar w-0.5 bg-sky-400 rounded-full"></span>
-                                    <span class="bar w-0.5 bg-sky-400 rounded-full"></span>
+                                    <span class="bar w-0.5 bg-red-600 rounded-full"></span>
+                                    <span class="bar w-0.5 bg-red-600 rounded-full"></span>
+                                    <span class="bar w-0.5 bg-red-600 rounded-full"></span>
+                                    <span class="bar w-0.5 bg-red-600 rounded-full"></span>
+                                    <span class="bar w-0.5 bg-red-600 rounded-full"></span>
                                 </div>
                             </div>
-                            <!-- Mock Player slider bar -->
-                            <div class="w-full bg-gray-800 h-1 rounded-full mt-3 overflow-hidden">
-                                <div class="bg-sky-400 h-full w-2/3 rounded-full"></div>
+                            <div class="w-full bg-stone-800 h-1 rounded-full mt-3 overflow-hidden">
+                                <div class="bg-red-600 h-full w-4/5 rounded-full"></div>
                             </div>
                         </div>
 
-                        <!-- Core Skills tag container -->
                         <div>
-                            <h3 class="text-sm font-bold text-sky-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-                                <span>■</span> ทักษะสำคัญ (Core Values)
+                            <h3 class="text-sm font-bold text-red-500 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                <span>🔴</span> ทักษะสำคัญ (Core Values)
                             </h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3.5 py-1.5 bg-gray-800 border border-gray-700/60 text-xs font-semibold rounded-lg flex items-center gap-2 hover:border-sky-400/40 transition-all cursor-default">
-                                    <span class="w-4 h-4 bg-sky-500 text-gray-950 font-bold rounded-full flex items-center justify-center text-[9px]">1</span> 
-                                    ความขยัน
+                                <span class="px-3.5 py-1.5 bg-stone-950 border border-stone-800 text-xs font-semibold rounded-lg flex items-center gap-2 hover:border-red-600/50 transition-all cursor-default">
+                                    <span class="w-4 h-4 bg-red-600 text-white font-bold rounded-full flex items-center justify-center text-[9px]">1</span> 
+                                    ความขยัน (Work Rate)
                                 </span>
-                                <span class="px-3.5 py-1.5 bg-gray-800 border border-gray-700/60 text-xs font-semibold rounded-lg flex items-center gap-2 hover:border-sky-400/40 transition-all cursor-default">
-                                    <span class="w-4 h-4 bg-sky-500 text-gray-950 font-bold rounded-full flex items-center justify-center text-[9px]">2</span> 
-                                    ความมีน้ำใจ
+                                <span class="px-3.5 py-1.5 bg-stone-950 border border-stone-800 text-xs font-semibold rounded-lg flex items-center gap-2 hover:border-red-600/50 transition-all cursor-default">
+                                    <span class="w-4 h-4 bg-amber-500 text-black font-bold rounded-full flex items-center justify-center text-[9px]">2</span> 
+                                    ความมีน้ำใจ (Teamwork)
                                 </span>
-                                <span class="px-3.5 py-1.5 bg-gray-800 border border-gray-700/60 text-xs font-semibold rounded-lg flex items-center gap-2 hover:border-sky-400/40 transition-all cursor-default">
-                                    <span class="w-4 h-4 bg-sky-500 text-gray-950 font-bold rounded-full flex items-center justify-center text-[9px]">3</span> 
-                                    ความเอาใจใส่
+                                <span class="px-3.5 py-1.5 bg-stone-950 border border-stone-800 text-xs font-semibold rounded-lg flex items-center gap-2 hover:border-red-600/50 transition-all cursor-default">
+                                    <span class="w-4 h-4 bg-red-600 text-white font-bold rounded-full flex items-center justify-center text-[9px]">3</span> 
+                                    ความเอาใจใส่ (Focus)
                                 </span>
                             </div>
                         </div>
@@ -345,94 +318,81 @@
             </div>
 
             <!-- 4. Career Goal Showcase -->
-            <div class="mt-8 pt-8 border-t border-gray-800">
-                <div class="relative bg-gradient-to-r from-sky-950/40 to-indigo-950/30 border border-sky-900/40 rounded-2xl p-5 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 hover:border-sky-500/40 transition-all shadow-lg overflow-hidden group">
-                    <div class="absolute -right-12 -bottom-12 w-36 h-36 bg-sky-500/5 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="mt-8 pt-8 border-t border-stone-800">
+                <div class="relative bg-gradient-to-r from-red-950/40 to-stone-950/50 border border-red-900/30 rounded-2xl p-5 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 hover:border-red-600/40 transition-all shadow-lg overflow-hidden group shadow-red-950/10">
+                    <div class="absolute -right-12 -bottom-12 w-36 h-36 bg-red-600/5 rounded-full blur-2xl pointer-events-none"></div>
                     <div class="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
-                        <div class="p-3 bg-sky-500/10 text-sky-400 rounded-2xl border border-sky-500/20 shadow-md">
+                        <div class="p-3 bg-red-600/10 text-red-500 rounded-2xl border border-red-500/20 shadow-md">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                             </svg>
                         </div>
                         <div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-sky-400">อาชีพในอนาคต (Career Objective)</span>
-                            <h2 class="text-xl md:text-2xl font-bold text-white mt-1">โปรแกรมเมอร์ <span class="text-sky-400">💻 Programmer</span></h2>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-amber-400">อาชีพในอนาคต (Career Objective)</span>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mt-1">โปรแกรมเมอร์ <span class="text-red-500">💻 Programmer</span></h2>
                         </div>
                     </div>
-                    <span class="px-4 py-2 bg-sky-400 text-gray-950 text-xs font-bold rounded-xl shadow-lg hover:shadow-sky-400/20 hover:-translate-y-0.5 transition-all cursor-default select-none">
+                    <span class="px-4 py-2 bg-red-600 text-white text-xs font-bold rounded-xl shadow-lg hover:shadow-red-600/20 hover:-translate-y-0.5 transition-all cursor-default select-none">
                         FUTURE TECH TALENT
                     </span>
                 </div>
             </div>
 
             <!-- 5. Student Motto Section -->
-            <div class="mt-6 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border border-gray-800 rounded-2xl p-4 text-center">
-                <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">คติประจำใจ (Motto)</p>
-                <p class="text-sm md:text-base italic text-sky-300 font-medium">"ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"</p>
+            <div class="mt-6 bg-gradient-to-r from-stone-950 via-stone-900 to-stone-950 border border-stone-800 rounded-2xl p-4 text-center">
+                <p class="text-[10px] text-stone-500 uppercase tracking-widest font-bold mb-1">คติประจำใจ (Motto)</p>
+                <p class="text-sm md:text-base italic text-amber-400 font-medium">"ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"</p>
             </div>
 
             <!-- Interactive Copy Details Button -->
             <div class="mt-6 flex justify-center">
-                <button onclick="copyProfileInfo()" class="px-5 py-2 bg-gray-800 hover:bg-gray-700/80 text-gray-300 hover:text-white border border-gray-700 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all shadow-md active:scale-95">
+                <button onclick="copyProfileInfo()" class="px-5 py-2 bg-stone-950 hover:bg-stone-800 text-stone-300 hover:text-white border border-stone-800 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all shadow-md active:scale-95">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
                     </svg>
-                    คัดลอกข้อมูลโปรไฟล์นักเรียน
+                    คัดลอกข้อมูลโปรไฟล์ (GGMU Style)
                 </button>
             </div>
 
-            <!-- Copy Success Toast Notification (Replaces native alerts) -->
-            <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-gray-950 font-bold px-6 py-3 rounded-xl shadow-2xl opacity-0 scale-90 pointer-events-none transition-all duration-300 z-50 flex items-center gap-2 text-sm">
-                ✅ คัดลอกข้อมูลเรียบร้อยแล้ว!
+            <!-- Copy Success Toast Notification -->
+            <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-red-600 text-white font-bold px-6 py-3 rounded-xl shadow-2xl opacity-0 scale-90 pointer-events-none transition-all duration-300 z-50 flex items-center gap-2 text-sm">
+                👹 Glory Glory Man United! คัดลอกข้อมูลเรียบร้อย!
             </div>
 
         </div>
     </div>
 
-    <!-- Script for Tab switching and interactive elements -->
+    <!-- Script for Tab switching and interactive Red Devil Particles -->
     <script>
-        // 1. Dynamic Tab Switching Logic
         function switchTab(tabId) {
-            // Hide all tab contents
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => {
                 content.classList.add('hidden');
                 content.classList.remove('block');
             });
 
-            // Deactivate all tab buttons
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(button => {
-                button.classList.remove('border-sky-400', 'text-sky-400');
-                button.classList.add('border-transparent', 'text-gray-400');
+                button.classList.remove('border-red-600', 'text-red-500');
+                button.classList.add('border-transparent', 'text-stone-400');
             });
 
-            // Show active tab content
             const activeContent = document.getElementById(`content-${tabId}`);
             if (activeContent) {
                 activeContent.classList.remove('hidden');
                 activeContent.classList.add('block');
             }
 
-            // Style active tab button
             const activeButton = document.getElementById(`tab-${tabId}`);
             if (activeButton) {
-                activeButton.classList.remove('border-transparent', 'text-gray-400');
-                activeButton.classList.add('border-sky-400', 'text-sky-400');
+                activeButton.classList.remove('border-transparent', 'text-stone-400');
+                activeButton.classList.add('border-red-600', 'text-red-500');
             }
         }
 
-        // 2. Custom Clipboard Copy function (Zero native alerts used)
         function copyProfileInfo() {
-            const profileText = `
-โปรไฟล์นักเรียน: ด.ช. ชิติพัทธ์ คงจันทร์ (น้องยูโร)
-ระดับชั้น: มัธยมศึกษาปีที่ 3, โรงเรียนจอมทอง
-ความฝัน: โปรแกรมเมอร์ (Programmer) 💻
-วิชาที่ชอบ: คณิตศาสตร์
-คติประจำใจ: "ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"
-            `.trim();
+            const profileText = `โปรไฟล์นักเรียน: ด.ช. ชิติพัทธ์ คงจันทร์ (น้องยูโร)\nระดับชั้น: มัธยมศึกษาปีที่ 3, โรงเรียนจอมทอง\nสโมสรที่รัก: แมนเชสเตอร์ ยูไนเต็ด 👹\nความฝัน: โปรแกรมเมอร์ (Programmer) 💻\nวิชาที่ชอบ: คณิตศาสตร์\nคติประจำใจ: "ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"`;
 
-            // Create temporary input for copying
             const el = document.createElement('textarea');
             el.value = profileText;
             document.body.appendChild(el);
@@ -440,7 +400,6 @@
             document.execCommand('copy');
             document.body.removeChild(el);
 
-            // Visual Toast Notification trigger
             const toast = document.getElementById('toast');
             toast.classList.remove('opacity-0', 'scale-90', 'pointer-events-none');
             toast.classList.add('opacity-100', 'scale-100');
@@ -451,7 +410,7 @@
             }, 2500);
         }
 
-        // 3. Interactive Programming Particles Background Logic
+        // Red Particles (Matchday Atmosphere Effect)
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
         let particlesArray = [];
@@ -468,8 +427,8 @@
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 2 + 1;
-                this.speedX = Math.random() * 0.3 - 0.15;
-                this.speedY = Math.random() * 0.3 - 0.15;
+                this.speedX = Math.random() * 0.4 - 0.2;
+                this.speedY = Math.random() * 0.4 - 0.2;
             }
             update() {
                 this.x += this.speedX;
@@ -479,7 +438,7 @@
                 if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
             }
             draw() {
-                ctx.fillStyle = '#38bdf8';
+                ctx.fillStyle = '#da020e'; // United Red
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -488,7 +447,7 @@
 
         function initParticles() {
             particlesArray = [];
-            const numberOfParticles = Math.min(60, Math.floor(window.innerWidth / 20));
+            const numberOfParticles = Math.min(50, Math.floor(window.innerWidth / 25));
             for (let i = 0; i < numberOfParticles; i++) {
                 particlesArray.push(new Particle());
             }
@@ -498,12 +457,12 @@
         function connectParticles() {
             let opacityValue = 1;
             for (let a = 0; a < particlesArray.length; a++) {
-                for (let b = a; b < particlesArray.length; b++) {
+                for (let b = a + 1; b < particlesArray.length; b++) {
                     let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
                     + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
-                    if (distance < (120 * 120)) {
-                        opacityValue = 1 - (distance / (120 * 120));
-                        ctx.strokeStyle = `rgba(56, 189, 248, ${opacityValue * 0.15})`;
+                    if (distance < (130 * 130)) {
+                        opacityValue = 1 - (distance / (130 * 130));
+                        ctx.strokeStyle = `rgba(218, 2, 14, ${opacityValue * 0.12})`;
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -523,11 +482,7 @@
             connectParticles();
             requestAnimationFrame(animateParticles);
         }
-
-        // Start particles on window load
-        window.onload = function() {
-            animateParticles();
-        }
+        animateParticles();
     </script>
 </body>
 </html>
